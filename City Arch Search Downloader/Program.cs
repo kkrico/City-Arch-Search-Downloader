@@ -16,10 +16,10 @@ namespace City_Arch_Search_Downloader
 
             var imagens = GerarImagens(local);
             BaixarImagens(imagens);
-            SanitizarImagensNãoBaixadas(local);
+            SanitizarImagensNaoBaixadas(local);
         }
 
-        private static void SanitizarImagensNãoBaixadas(string local)
+        private static void SanitizarImagensNaoBaixadas(string local)
         {
             var files = Directory.EnumerateFiles(local)
                 .Select(f => new FileInfo(f))
