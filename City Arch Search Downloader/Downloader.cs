@@ -12,7 +12,7 @@ namespace City_Arch_Search_Downloader
     {
         public const string URI = "https://kraken99.blob.core.windows.net/images1000xn/";
         private static int ULTIMAIMAGEMBAIXADA;
-        private static int BLOCOPARADOWNLOAD = 100;
+        private static int BLOCOPARADOWNLOAD = 1000;
 
         public static void BaixarImagens(string local)
         {
@@ -23,7 +23,7 @@ namespace City_Arch_Search_Downloader
             } while (continuarBaixando);
         }
 
-        private static bool BaixarBlocoDeImagens(string local, int imagemInicial = 6500)
+        private static bool BaixarBlocoDeImagens(string local, int imagemInicial = 0)
         {
             var tasks = new List<Task>();
 
